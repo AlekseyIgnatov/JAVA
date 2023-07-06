@@ -8,7 +8,8 @@ public class Lesson_1 {
    
 
 public static void main(String[] args) {
-    Triangle_number();
+    //Triangle_number();
+    Prime_numbers();
 }
     
 // 1) Вычислить n-ое треугольного число (сумма чисел от 1 до n), n! (произведение чисел от 1 до n) 
@@ -23,7 +24,23 @@ public static void main(String[] args) {
         keyboard.close();
     }
 // 2) Вывести все простые числа от 1 до 1000
-
+    static void Prime_numbers() {
+        
+        //int n = 1000;
+        int i, j, count;
+        for (i=1; i < 1000; i++) {
+            count = 0;
+            for (j = 2; j <= i/2; j++) {
+                if (i % j == 0) {
+                    count++;
+                    break;
+                }
+            }
+            if (count ==0 && i !=1){
+                System.out.print(i + " ");  
+            }
+        }
+    }
 // 3) Реализовать простой калькулятор
 
 // 4) (дополнительное задание) Задано уравнение вида q + w = e, q, w, e >= 0. 
